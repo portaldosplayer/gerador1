@@ -1,0 +1,71 @@
+<?php
+$video = isset($_GET['video']) ? $_GET['video'] : '';	
+?>
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="noindex,nofollow">	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="file:////css/bootstrap.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<head>
+<title>Gerador3 - Embed Generator</title>
+</head>
+<div class="separator" style="clear: both; text-align: center;">
+<a href="/gerador3" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="300" data-original-width="1200" height="80" src="https://playvideo.sitevip.ml/gerador3/logo.png" width="320" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+<br /></div>
+
+<div style="text-align: center;">
+<span style="color: blue;"><b><i>CAPNEL</i></b></span></div>
+<div style="text-align: center;">
+<span style="color: blue;"><b><i>Gerador de Player Mp4</i></b></span></div>
+<br>
+
+<body style="text-align: center; background-color: black">
+<div class="main">
+<div class="container">
+<div class="form-group">
+<a href="/gerador3" target="_blank"><input style="background: blue; border-color: Blue; border-radius: 3px; color: gold; padding: 10px;" type="submit" value="       ↩ Volta      " /> 
+</a>
+</br></br>
+<form action="" method="GET" accept-charset="utf-8">
+			<div class="form-group">
+				<label class="font-weight-bold">URL:</label>
+				<input type="text" name="video" class="form-control" placeholder="Ex: https://www.sitevip.ml/video.mp4" onclick="this.select()" required>
+<br>
+<input class="btn btn-lg btn-primary btn-block" type="submit" value="Gerar">
+</br></br></br></br>
+</form>
+<?php
+$video = isset($_GET['video']) ? $_GET['video'] : '';
+if ($video == true){	
+?>
+<hr>
+<iframe src="<?php include('config/url.php'); ?>play/embed.php?v=<?php echo $video; ?>" width="100%" height="320px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<h4>Embed</h4>
+<div><?php if($video){echo '<textarea style="margin:5px;width: 100%;height: 75px;" onClick="this.setSelectionRange(0, this.value.length)">&lt;iframe src="'?><?php include('config/url.php'); ?><?php echo 'play/embed.php?v='.$video.'" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen&gt;&lt;/iframe&gt;</textarea>';}?></div>
+<h4>Link Embed</h4>
+<div><?php if($video){echo '<textarea style="margin:5px;width: 100%;height: 75px;" onClick="this.setSelectionRange(0, this.value.length)">'?><?php include('config/url.php'); ?><?php echo 'play/embed.php?v='.$video.'</textarea>';}?></div>
+<hr>
+<?php
+}
+else{
+} 
+?>
+<span style="color: red;">Copyright © 2019</span> <span style="color: White;"><a href="http://www.scriptsnet.gq">Script Net</a>- Todos os direitos reservados</span>
+</div>
+</div>
+</div>
+<script src="file:////js/jquery-1.11.3.min.js"></script>
+<script src="file:////js/bootstrap.js"></script>	
+</body>
+</html>
