@@ -50,11 +50,11 @@ $video = isset($_GET['video']) ? $_GET['video'] : '';
 if ($video == true){	
 ?>
 <hr>
-<iframe src="<?php include('config/url.php'); ?>play/embed.php?v=<?php echo $video; ?>" width="100%" height="320px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="<?php include('config/url.html'); ?>play/embed.html?v=<?php echo $video; ?>" width="100%" height="320px" frameborder="0" scrolling="no" allowfullscreen></iframe>
 <h4>Embed</h4>
-<div><?php if($video){echo '<textarea style="margin:5px;width: 100%;height: 75px;" onClick="this.setSelectionRange(0, this.value.length)">&lt;iframe src="'?><?php include('config/url.php'); ?><?php echo 'play/embed.php?v='.$video.'" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen&gt;&lt;/iframe&gt;</textarea>';}?></div>
+<div><?php if($video){echo '<textarea style="margin:5px;width: 100%;height: 75px;" onClick="this.setSelectionRange(0, this.value.length)">&lt;iframe src="'?><?php include('config/url.html'); ?><?php echo 'play/embed.html?v='.$video.'" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen&gt;&lt;/iframe&gt;</textarea>';}?></div>
 <h4>Link Embed</h4>
-<div><?php if($video){echo '<textarea style="margin:5px;width: 100%;height: 75px;" onClick="this.setSelectionRange(0, this.value.length)">'?><?php include('config/url.php'); ?><?php echo 'play/embed.php?v='.$video.'</textarea>';}?></div>
+<div><?php if($video){echo '<textarea style="margin:5px;width: 100%;height: 75px;" onClick="this.setSelectionRange(0, this.value.length)">'?><?php include('config/url.html'); ?><?php echo 'play/embed.html?v='.$video.'</textarea>';}?></div>
 <hr>
 <?php
 }
